@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECNA ICE - Gestión de Riesgos Industriales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tecna-blue': '#1e3a8a',
+                        'tecna-light': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-tecna-blue to-tecna-light min-h-screen">
+    <header class="min-h-screen flex flex-col justify-center items-center text-white px-6 relative">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-32 right-32 w-24 h-24 bg-white rounded-full blur-2xl"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full blur-xl"></div>
+        </div>
+
+        <div class="text-center mb-12 relative z-10">
+            <h1
+                class="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                PRUEBA BOT (TECNA ICE)
+            </h1>
+            <div class="w-32 h-1 bg-gradient-to-r from-tecna-light to-white mx-auto"></div>
+        </div>
+    </header>
+
+    <!-- contenido principal eliminado -->
+
+    <footer class="absolute bottom-6 left-6 right-6 text-center text-sm opacity-60">
+        <p>© 2025 JC</p>
+    </footer>
+
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'http://192.168.1.7:5678/webhook/dbb75228-1b01-43a9-934f-6a7aa9794516/chat',
+            initialMessages: [
+                '¡Hola! Soy tu TecnaBot. ¿En qué puedo ayudarte?'
+            ],
+            i18n: {
+                en: {
+                    title: 'Comercial Tecna',
+                    subtitle: 'Servicio y productos',
+                    footer: '',
+                    getStarted: 'Iniciar consulta',
+                    inputPlaceholder: 'Escribe tu consulta...',
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
